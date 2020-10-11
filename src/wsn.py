@@ -2,13 +2,11 @@ import math
 
 class WSN:
 
-    def __init__(self, power, id, data, pos_x, pos_y):
+    def __init__(self, id, pos_x, pos_y):
         self.id = id
-        self.power = power
-        self.data = data
         self.pos_x = pos_x
         self.pos_y = pos_y
-        self.rx = None
+        self.data =0
 
 
     def dist(self, y):
@@ -17,7 +15,7 @@ class WSN:
         return math.sqrt(x_dist * x_dist + y_dist * y_dist)
 
     def __str__(self):
-        return 'id:{self.id}, power: {self.power}, data: {self.data}, pos_x:{self.pos_x}, pos_y: {self.pos_y}'.format(self=self)
+        return 'id:{self.id}, data: {self.data}, pos_x:{self.pos_x}, pos_y: {self.pos_y}'.format(self=self)
         
 
 

@@ -1,22 +1,23 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-G=nx.Graph()
-# G.add_node("a")
-# G.add_nodes_from(["b","c"])
+# G=nx.path_graph(4)
+G = nx.path_graph(4)
+pos = nx.planar_layout(G)
+print(pos)
+# print(list(nx.dfs_edges(G, source=0)))
 
-G.add_edge(1,2)
-edge = (1, "e")
-G.add_edge(*edge)
-edge = (1, "b")
-G.add_edge(*edge)
-edge = (2, 'e')
-G.add_edge(*edge)
+# print(list(nx.dfs_edges(G, source=0, depth_limit=2)))
 
-print("Nodes of graph: ")
-print(G.nodes())
-print("Edges of graph: ")
-print(list(G.adj[2])[0])
-# nx.draw(G)
-# plt.savefig("simple_path.png") # save as png
-# plt.show() # display
+# # import numpy as np
+# # a = np.random.randint(0, 3, size=(10, 10))
+# # print(a)
+# # G = nx.DiGraph(a)
+
+# print("Nodes of graph: ")
+# print(G.nodes())
+# print("Edges of graph: ")
+# print(G.edges())
+nx.draw(G, with_labels=True)
+plt.savefig("path_graph1.png")
+plt.show()
