@@ -7,6 +7,7 @@ class WSN:
         self.pos_x = pos_x
         self.pos_y = pos_y
         self.data =0
+        self.status = None
 
 
     def dist(self, y):
@@ -15,7 +16,7 @@ class WSN:
         return math.sqrt(x_dist * x_dist + y_dist * y_dist)
 
     def __str__(self):
-        return 'id:{self.id}, data: {self.data}, pos_x:{self.pos_x}, pos_y: {self.pos_y}'.format(self=self)
+        return 'id:{self.id}, data: {self.data},    pos_x:{self.pos_x}, pos_y: {self.pos_y}, status: {self.status}'.format(self=self)
         
 
 
